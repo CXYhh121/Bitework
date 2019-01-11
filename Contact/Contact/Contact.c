@@ -1,4 +1,5 @@
 #include"Contact.h"
+#include"Person.h"
 void InitContact(Contact* pcon)
 {
 	assert(pcon != NULL);
@@ -69,7 +70,7 @@ int CheckCapacity(Contact* pcon)
 		{
 			pcon->data = ptr;
 			pcon->capacity += INC_SZ;
-			printf("增容成功！\n");
+			printf("\t增容成功！\n");
 			return 1;
 		}
 		else

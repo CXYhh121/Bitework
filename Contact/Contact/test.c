@@ -2,12 +2,14 @@
 
 void menu()
 {
-	printf("****************************************\n");
-	printf("******1、add         2、del      *******\n");
-	printf("******3、search      3、modify   *******\n");
-	printf("******5、show        6、empty    *******\n");
-	printf("******7、sort        0、exit     *******\n");
-	printf("****************************************\n");
+	printf("\t****************************************\n");
+	printf("\t********     欢迎使用通讯录   **********\n");
+	printf("\t****************************************\n");
+	printf("\t******1、add         2、del      *******\n");
+	printf("\t******3、search      3、modify   *******\n");
+	printf("\t******5、show        6、empty    *******\n");
+	printf("\t******7、sort        0、exit     *******\n");
+	printf("\t****************************************\n");
 }
 void test()
 {
@@ -17,7 +19,7 @@ void test()
 	LoaContact(&con);
 	do{
 		menu();
-		printf("请选择:>");
+		printf("请输入你的选择:>");
 		scanf("%d", &input);
 		switch (input)
 		{

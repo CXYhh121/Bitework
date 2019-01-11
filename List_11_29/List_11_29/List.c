@@ -118,8 +118,12 @@ void SListInsertAfter(SListNode* pos, SLTDataType x)
 // 在pos的前面进行插入 
 void SListEraseAfter(SListNode* pos)
 {
-	assert(pos);
-	pos->_next = pos->_next->_next;
+	assert(pos && pos->_next);
+	SListNode* next = pos->_next;
+	SListNode* nextnext = next->_next;
+	
+	pos->_next = nextnext;
+	free(next);
 }
 void SListRemove(SList* plist, SLTDataType x)
 {
@@ -163,11 +167,12 @@ void Listtest1()
 	//SListPushBack(&list, 0);
 	//SListPopFront(&list);
 	//SListPopBack(&list);
-	//SListNode* pos = SListFind(&list, 3);
-	//printf("%d\n", pos->_data);
-	//SListInsertAfter(pos, 6);
-	//SListEraseAfter(pos);
+	/*SListNode* pos = SListFind(&list, 3);
+	printf("%d\n", pos->_data);
+	SListInsertAfter(pos, 6);
+	SListEraseAfter(pos);*/
 	SListRemove(&list, 2);
 	SListPrint(&list);
+	SListDstory(&list);
 
 }
