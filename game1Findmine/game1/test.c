@@ -14,7 +14,7 @@ void game()
 	//打印Display
 	//布置雷
 	Setmine(mine, ROW, COL);
-	Display(mine, ROW, COL);
+	//Display(mine, ROW, COL);
 	//找雷
 	//SafeMine(mine, show, ROW, COL);
 	Findmine(mine, show, ROW, COL);
@@ -24,8 +24,11 @@ void game()
 void menu()
 {
 	printf("******************************\n");
+	printf("*******欢迎来到扫雷小游戏*****\n");
+	printf("******************************\n");
 	printf("******    1.play        ******\n");
 	printf("******    0.exit        ******\n");
+	printf("******************************\n");
 	printf("******************************\n");
 }
 int main()
